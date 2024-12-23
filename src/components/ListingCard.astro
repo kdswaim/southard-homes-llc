@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import Link from "./ui/link.astro";
+const { listingImg, listingAlt, listingAddress, listingCityZip, listingPrice, lBeds, lBath, lGarage, lsqFt, listPerkFirst, listPerkSecond, listPerkThird, listingLink } = Astro.props;
+---
+
+<div id="cardBG" class="max-w-xs rounded-xl overflow-hidden shadow-lg">
+    <img class="w-full" src={listingImg} alt={listingAlt}>
+<div class="px-6 py-4 rounded">
+<div class="flex justify-between text-xl mb-2">
+    <div><b>{listingPrice}</b><span id="badge" class="align-middle whitespace-nowrap rounded-full px-4 py-3 align-top leading-none font-prose">-$15K</span></div>
+</div>
+<div id="listingFeatures" class="font-prose flex-1 flex items-center justify-between">
+    <div class="flex gap-1 align-top"><b>{lBeds}</b> Bed</div>
+    <div class="flex gap-1 align-top"><b>{lBath}</b> Bath</div>
+    <div class="flex gap-1 align-top"><b>{lGarage}</b></div>
+    <div class="flex gap-1 align-top"><b>{lsqFt}</b> SqFt</div>
+</div>
+<div class="pt-4">
+<div class="flex-start font-prose">
+{listingAddress}
+<div class="flex-start font-prose">
+    {listingCityZip} 
+</div>
+</div>
+</div>
+<div class="pt-4 pb-2 hidden">
+<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkFirst}</span>
+<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkSecond}</span>
+<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkThird}</span>
+</div>
+<div class="px-6 pt-4 hover:animate-pulse pb-2">
+    <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href={listingLink}
+        class="flex gap-1 items-center justify-center bg-[#ffca28] border-none drop-shadow-md"
+        target="_blank">
+        <Icon name="fluent:real-estate-20-filled" />
+         View Listing
+      </Link>
+</div>
+</div>
+</div>
+
+<style>
+#cardBG {
+    background-color: rgba(248, 250, 252, 0.93) !important;
+    color: black;
+}
+#badge {
+    color: #00a877;
+}
+#listingFeatures {
+    color: #000000;
+    opacity: 0.8;
+}
+    </style>

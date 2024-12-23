@@ -1,0 +1,25 @@
+---
+import { LinkPreview } from 'astro-embed';
+---
+<div class="w-full justify-center py-8 ">
+    <h1 class="text-4xl w-full flex justify-center py-4">In The News</h1>
+<div id="lcardStyle" class="rounded-lg">
+    <LinkPreview
+id="https://www.tribstar.com/news/local_news/ribbon-cut-for-terre-vista-glen-project-in-terre-haute/article_a7bafb10-81b0-11ef-8a50-6f865a3aecb8.html" />
+</div>
+</div>
+
+<style>
+    :root {
+        --link-preview-corners: 0.5em;
+        --link-preview-width: 100%;
+        --link-preview-padding-inline: 1rem;
+    }
+
+#lcardStyle {
+    background-image: linear-gradient(black, rgba(248, 250, 252, 0.93)) !important;
+    color: black;
+    padding-bottom: 1rem;
+    font-family: sans-serif;
+}
+</style>

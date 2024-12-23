@@ -1,0 +1,31 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+<Layout title="Homes for Sale| Terre Haute, IN | Southard Homes LLC">
+    <Container>
+              <Sectionhead>
+                <Fragment slot="title">Rent-to-Own (RTO)</Fragment>
+                <Fragment slot="desc"></Fragment>
+              </Sectionhead>
+<div class="mt-16 md:mt-0">
+    <p class="text-lg mt-4 text-slate-600 pb-4">
+        Let us guess: You can afford monthly rent but not a lower monthly home payment?
+        <br/>
+        We can't help you make sense of the housing market, but we can get you closer where you want to be: owning a home. <br/>
+
+        We offer a 15-year contract for our RTO homes, and the house is yours upon completion. <br/>
+
+        We buy local properties and bring them to their property glory thanks to our other Quality Companies: Quality Roofing of Indiana LLC, Quality Electric of Indiana LLC, and Quality Excavating of Indiana LLC.
+    <br/>
+    And with our team of trusted local vendors, Southard Homes LLC has everything we need to get the job done.
+    <br/>
+        See a home you like? </br><a href="tel:812-243-2759" target="_blank" class="text-[#ffca28] font-bold">Call us</a> any time to talk about inventory and options.
+    </p>
+    </div>
+<div class="text-center italic text-2xl pt-8 font-prose">No RTO properties available. Check back soon!</div>
+            <Cta /> 
+    </Container>
+  </Layout>

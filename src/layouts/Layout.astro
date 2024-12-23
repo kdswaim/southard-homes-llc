@@ -2,10 +2,9 @@
 import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
-import "@fontsource-variable/inter/index.css";
-import '@fontsource-variable/bricolage-grotesque';
-
-
+import '@fontsource/source-sans-pro';
+import '@fontsource/belleza';
+import '@fontsource/libre-caslon-display';
 
 export interface Props {
   title: string;
@@ -14,15 +13,15 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/opengraph.jpg", //take pic of website once finished and replace here!
   Astro.site
 ).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "Southard Homes LLC"
+  : "Southard Homes LLC - Homes for Sale, Houses for Rent, and Rent-to-Own (RTO) in Terre Haute, Indiana"; //Update if needed!
 ---
 
 <!DOCTYPE html>
@@ -36,22 +35,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="Southard Homes LLC is a local family-owned real estate, property development, and residential construction company serving the Wabash Valley since 2019. Looking for homes for sale, homes for rent, or rent to own (RTO) opportunities? Call us today!"
       canonical={canonicalURL}
-      twitter={{
-        creator: "@surjithctly",
-        site: "@web3templates",
+      twitter={{ 
+        creator: "@southardhomesllc",
+        site: "https://www.facebook.com/p/Southard-Homes-LLC-61564654631774/",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Astroship - Starter Template for Astro`,
+          title: `Southard Homes LLC - Homes for Sale, Houses for Rent, and Rent-to-Own (RTO) in Terre Haute, Indiana`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "Southard Homes LLC Homepage Screenshot",
         },
       }}
     />
@@ -65,6 +64,11 @@ const makeTitle = title
       /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
+      }
+
+      body {
+        background-image: linear-gradient(black, #424036);
+        color: #ffffff;
       }
     </style>
   </body>
