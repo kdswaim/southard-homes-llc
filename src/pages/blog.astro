@@ -4,6 +4,7 @@ import { Picture } from "astro:assets";
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import Newsroll from "@components/newsroll.astro";
 
 // Filter blog entries with 'draft: false' & date before current date
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
@@ -16,15 +17,17 @@ publishedBlogEntries.sort(function (a, b) {
 });
 ---
 
-<Layout title="Blog">
+<Layout title="Newsroom">
   <Container>
     <Sectionhead>
-      <Fragment slot="title">Our Blog</Fragment>
+      <Fragment slot="title">Newsroom</Fragment>
       <Fragment slot="desc">
-        We write about building startups and thoughts going on our mind.
+        Press Releases, Blogs, and Community Updates
       </Fragment>
     </Sectionhead>
+
     <main class="mt-16">
+      <div class="text-center italic text-sensible-gray">Nothing to see here, yet. Check again soon!</div>
       <ul class="grid gap-16 max-w-4xl mx-auto">
         {
           publishedBlogEntries.map((blogPostEntry, index) => (
@@ -68,6 +71,12 @@ publishedBlogEntries.sort(function (a, b) {
           ))
         }
       </ul>
+
+<section>
+  <Newsroll />
+</section>
+
+
     </main>
   </Container>
 </Layout>

@@ -29,9 +29,15 @@ const makeTitle = title
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
 
+    <!-- Web Analytics -->
+    <script data-goatcounter="https://southard-analytics.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    <script>
+      // Only load on production environment.
+      if (window.location.host !== 'southardhomesllc.com')
+          window.goatcounter = {no_onload: true}
+  </script>
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
@@ -56,7 +62,11 @@ const makeTitle = title
     />
   </head>
   <body>
+    
+    <div class="top-0 w-screen z-50 bg-[#000000] shadow-lg">
     <Navbar />
+  </div>
+</div>
     <slot />
     <Footer />
     <style is:global>
