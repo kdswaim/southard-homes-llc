@@ -1,8 +1,9 @@
 ---
 import { Icon } from "astro-icon/components";
+import Container from "./container.astro";
 ---
 
-
+<Container>
 <footer>
   <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
     <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -16,10 +17,10 @@ import { Icon } from "astro-icon/components";
           <p class="mt-4 text-sm text-gray-800">
             Looking for a roof or need electrical work? Check out our other Quality Companies.
           </p>
-          <div class="flex align-baseline items-center gap-3 drop-shadow-lg">
-            <a href="/" aria-label="Go Home"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/t_Thumbnail/v1726851366/Untitled_design_1_cmq9ym.svg" alt="Southard Homes LLC" class="max-w-32 drop-shadow-sm"></a>
-            <a href="https://qualityroofingofindiana.com/" target="_blank"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/v1735747985/QualityRoofingTransparent_-_1_u9zanb.png" alt="Quality Roofing of Indiana LLC" class="max-w-32 drop-shadow-sm">
-             <a href="https://www.facebook.com/people/Quality-Electric-of-Indiana-LLC/61565710887751/?_rdr" aria-label="Go Home"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/t_Thumbnail/v1728589852/Electric_faubci.svg" alt="Quality Roofing of Indiana LLC" class="max-w-32 drop-shadow-sm"></a>
+          <div class="md:flex align-baseline items-center gap-3 drop-shadow-lg basis-1">
+            <a href="/" aria-label="Go Home"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/t_Thumbnail/v1726851366/Untitled_design_1_cmq9ym.svg" alt="Southard Homes LLC" class="drop-shadow-sm"></a>
+            <a href="https://qualityroofingofindiana.com/" target="_blank"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/v1735747985/QualityRoofingTransparent_-_1_u9zanb.png" alt="Quality Roofing of Indiana LLC" class="drop-shadow-sm">
+             <a href="https://www.facebook.com/people/Quality-Electric-of-Indiana-LLC/61565710887751/?_rdr" aria-label="Go Home"><img src="https://res.cloudinary.com/dqfotf1jf/image/upload/t_Thumbnail/v1728589852/Electric_faubci.svg" alt="Quality Roofing of Indiana LLC" class="drop-shadow-sm"></a>
            </div>
         </div>
       </div>
@@ -83,3 +84,4 @@ import { Icon } from "astro-icon/components";
   </div>
 
 </footer>
+</Container>
