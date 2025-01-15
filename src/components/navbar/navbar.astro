@@ -3,6 +3,7 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Icon } from 'astro-icon/components';
 
 const menuitems = [
   {
@@ -21,7 +22,7 @@ const menuitems = [
   //   path: "/pricing",
   // },
   {
-    title: "Who We Are",
+    title: "About Us",
     path: "/about/",
   },
   // {
@@ -30,26 +31,30 @@ const menuitems = [
   // },
   {
     title: "Newsroom",
-    path: "/blog",
+    path: "/blog/",
   }
 ];
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+  <header class="flex flex-col lg:flex-row justify-between items-center bg-[#000000]">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
           >
-<span class="font-bold text-slate-800 font-serif">Southard Homes</span><span
-            class="text-slate-500"> LLC</span
-          >
+<span class="font-bold font-serif uppercase justify-center">
+    <img class="size-44 m-auto brightness-115" src="/logo.png" aria-label="Southard Homes LLC" alt="Southard Homes LLC" id="logo">
+        <!-- <div class="">
+      Southard Homes</span><span
+                class="text-xs mx-0 px-0 leading-tight"> LLC</span
+              > -->
+      <!-- </div> -->
         </a>
         <div class="block lg:hidden">
-          <MenuIcon class="w-4 h-4 text-gray-800" />
+          <MenuIcon class="w-8 h-8 text-gray-800" />
         </div>
       </div>
-      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+      <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0 pb-4 bg-[#000000]"> 
         <ul class="flex flex-col lg:flex-row lg:gap-3">
           {
             menuitems.map((item, index) => (
@@ -66,7 +71,7 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
-                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
+                      class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-[#ffca28]">
                       <span> {item.title}</span>
                       {item.badge && (
                         <span class="ml-1 px-2 py-0.5 text-[10px] animate-pulse font-semibold uppercase text-white bg-indigo-600 rounded-full">
@@ -80,9 +85,9 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Renters <italic>(Coming Soon!)</italic>
-            <img src="/doorloop.png" alt="Doorloop Renter Portal" class="object-contain h-30 w-40 m-auto"/>
+        <div class="lg:hidden flex basis-0 items-center mt-3 gap-4">
+          <Link href="#" id="renters" style="muted" disabled block size="md">Renters <italic>(Coming Soon!)</italic>
+            <img src="/doorloop.png" alt="Doorloop Renter Portal" class="object-contain h-30 w-40 m-auto grayscale"/>
           <!-- Make the logo gray and the other box same size -->
           </Link>
           <Link href="tel:812-243-2759" size="md" block>Contact Us</Link>
@@ -91,9 +96,24 @@ const menuitems = [
     </Astronav>
     <div>
       <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Renters</a>
-        <Link href="tel:8122432759" size="md">Call Us</Link>
+          <a href="https://www.facebook.com/p/Southard-Homes-LLC-61564654631774/">
+            <Icon name="simple-icons:facebook" /></a>
+          <a href="https://www.instagram.com/southardhomes.llc/"><Icon name="simple-icons:instagram" /></a>
+          <a href="https://www.tiktok.com/@southardhomesllc/"><Icon name="simple-icons:tiktok" /></a>
+        <a href="#" class="disabled text-sensible-gray">Renters <span id="pill">(Coming Soon!)</span></a>
+        <Link id="call" href="tel:8122432759" size="lg">Contact Us</Link>
       </div>
     </div>
   </header>
 </Container>
+
+<style>
+  #pill {
+    color: gray;
+    font-size: small;
+  }
+
+  #call {
+    border: solid #ffca28!important;
+  }
+</style>

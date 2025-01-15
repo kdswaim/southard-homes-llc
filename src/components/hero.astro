@@ -4,13 +4,19 @@ import heroImage from "assets/hero.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 import Listings from "@components/Listings.astro";
+import { CldVideoPlayer } from 'astro-cloudinary';
 ---
+<main>
 
+<<<<<<< HEAD
 <main id="imgBkg"
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1">
   </div>
   <div>
+=======
+  <!-- <div>
+>>>>>>> 00e48ddfbc9c5feeaf32e8d708fd13b37e2c48c2
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter font-serif">
       Welcome <span style="color:#ffca28">Home.</span>
@@ -18,10 +24,57 @@ import Listings from "@components/Listings.astro";
     <p class="text-lg mt-4 text-slate-600 max-w-xl">
       Southard Homes LLC is a local family-owned real estate, property development, and residential construction company serving the Wabash Valley since 2019. <wbr /> Looking for homes for sale, homes for rent, or rent to own (RTO) opportunities? Call us today!
     </p>
+
     <div class="mt-6 flex flex-col sm:flex-row gap-3">
     </div>
     <Listings />
+  </div> -->
+
+
+  <header
+  class="relative items-center justify-center h-screen mb-12 overflow-hidden grid place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+>
+  <div
+    class="bg-black relative z-20 text-2xl text-white rounded-xl"
+  >
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter font-serif">
+      Welcome <span style="color:#ffca28">Home.</span>
+    </h1>
+    <p class="text-lg mt-4 after:text-[#ffffff] drop-shadow-lg max-w-xl">
+      Southard Homes LLC is a local family-owned real estate, property development, and residential construction with more than 25 years of experience serving the Wabash Valley since 2019. <wbr /> Looking for homes for sale, homes for rent, or rent to own (RTO) opportunities? Call us today!
+    </p>
+    <div class="justify-center flex items-center py-8">
+    <Link id="call" class="bg-[#ffca28] border-[#ffca28] scale-200 hover:border-[#ffffff]" href="tel:8122432759" size="lg"><span class="text-clip drop-shadow-lg contrast-200 stroke-[#000000]">Get In Touch</span></Link>
   </div>
+</div>
+  <video
+  aria-ignore
+    muted
+    autoplay
+    class="absolute object-cover min-w-full min-h-full max-w-none"
+  >
+    <source
+      src="https://res.cloudinary.com/dqfotf1jf/video/upload/v1735690280/terretownclips2024_-_Made_with_Clipchamp_4_qtgdjz.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
+</header>
+
+<section class="w-full">
+
+<h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex">
+  Available Homes</h2>
+  <p class="w-full pt-8 text-lg">
+  We are working on developing homes to suit a range of needs at every price point.
+   Don't see what you need?<br/>
+   Check back for new single-family homes in <b>Southard Acres West</b> (Terre Town) starting at $230,000, homes in <b>Terre Vista Glen</b> starting around $400,000, and updated city lots starting at around $130K.
+   </p>
+<div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 justify-between md:justify-start">
+  <Listings />
+</div>
+</section>
 </main>
 
 <style>

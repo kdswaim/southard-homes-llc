@@ -4,15 +4,17 @@ import Container from "@components/container.astro";
 import Listings from "@components/Listings.astro";
 import Cta from "@components/cta.astro";
 import Newsroll from "@components/newsroll.astro";
+import Sectionhead from "@components/sectionhead.astro";
 ---
 <Layout title="Homes for Sale| Terre Haute, IN | Southard Homes LLC">
     <Container>
+        <Sectionhead>
+            <Fragment slot="title">Homes for Sale</Fragment>
+            <Fragment slot="desc">New Construction homes starting at $130K<span style="text-sm">*</span></Fragment>
+          </Sectionhead>
         
 <div class="mt-16 md:mt-0">
-    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight font-serif">
-        Homes for Sale
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 pb-4">
+    <p class="text-lg mt-4 text-slate-600 pb-8">
         Our office on <b>3601 N Fruitridge Ave</b> may have opened in 2019, but our team has more than twenty years of experience in home building. <br/>
         We specialize in new construction homes so that you can enjoy your new home for (hopefully) many decades.<br/>
         Using our own crews and 100% local contractors to build our homes means minimal guesswork for future repairs and peace of mind until then. <br/>
