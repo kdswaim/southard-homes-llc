@@ -6,17 +6,9 @@ import { Icon } from "astro-icon/components";
 import Listings from "@components/Listings.astro";
 ---
 
-<main
+<main id="imgBkg"
   class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt=""
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
+  <div class="py-6 md:order-1">
   </div>
   <div>
     <h1
@@ -31,3 +23,12 @@ import Listings from "@components/Listings.astro";
     <Listings />
   </div>
 </main>
+
+<style>
+  #imgBkg {
+    background-image: url("https://res.cloudinary.com/dqfotf1jf/image/upload/t_Banner 16:9/v1726861810/Home_sj51i5.jpg");
+    background-repeat: no-repeat;
+    width: screen;
+    height: screen;
+  }
+</style>
