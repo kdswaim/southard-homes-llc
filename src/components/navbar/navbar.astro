@@ -85,12 +85,11 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex basis-0 items-center mt-3 gap-4">
-          <Link href="#" id="renters" style="muted" disabled block size="md">Renters <italic>(Coming Soon!)</italic>
-            <img src="/doorloop.png" alt="Doorloop Renter Portal" class="object-contain h-30 w-40 m-auto grayscale"/>
-          <!-- Make the logo gray and the other box same size -->
+        <div class="lg:hidden flex items-center mt-3 gap-4">
+          <Link href="https://southardhomesllc.app.doorloop.com/auth/login" id="renters" target="_blank" block size="md">
+            <img src="/brandeddl.png" alt="Doorloop Renter Portal" class="object-contain h-30 w-40 m-auto"/>
           </Link>
-          <Link href="tel:812-243-2759" size="md" block>Contact Us</Link>
+          <Link id="contact" href="tel:812-243-2759" size="md" block>Contact Us</Link>
         </div>
       </MenuItems>
     </Astronav>
@@ -100,7 +99,7 @@ const menuitems = [
             <Icon name="simple-icons:facebook" /></a>
           <a href="https://www.instagram.com/southardhomes.llc/"><Icon name="simple-icons:instagram" /></a>
           <a href="https://www.tiktok.com/@southardhomesllc/"><Icon name="simple-icons:tiktok" /></a>
-        <a href="#" class="disabled text-sensible-gray">Renters <span id="pill">(Coming Soon!)</span></a>
+        <a href="https://southardhomesllc.app.doorloop.com/auth/login" class="text-sensible-gray" target="_blank">Rentals</a>
         <Link id="call" href="tel:8122432759" size="lg">Contact Us</Link>
       </div>
     </div>
@@ -108,12 +107,20 @@ const menuitems = [
 </Container>
 
 <style>
-  #pill {
-    color: gray;
-    font-size: small;
-  }
 
   #call {
     border: solid #ffca28!important;
   }
+
+  #contact {
+    font-size:x-large;
+    background-color: #ffca28;
+    color: rgba(0, 0, 0, 0.842);
+    font-weight: bold;
+  }
+
+  #renters {
+    border: none;
+  }
+
 </style>
