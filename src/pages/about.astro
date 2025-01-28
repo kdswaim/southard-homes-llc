@@ -18,36 +18,36 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     <div class="bg-cover bg-center py-28 drop-shadow-sm" id="aboutBg">
     <Sectionhead>
       <Fragment slot="title">About Us</Fragment>
-      <Fragment slot="desc">Local & Family-Owned</Fragment>
+      <Fragment slot="desc">3601 N Fruitridge Avenue</Fragment>
     </Sectionhead>
   </div>
 
-<!-- To do: flex, company logos w/contact -->
-
-
     <div class="font-prose py-8 px-16">
      
-      Southard Homes LLC is a local family-owned real estate, property development, and residential construction company serving the Wabash Valley since 2019. <br />
-      Our office on 3601 N Fruitridge Ave may have opened in 2019, but our team has more than twenty years of experience in home building. <br />
+      Southard Homes LLC is a local family-owned real estate, property development, and residential construction company serving the Wabash Valley since 2019. 
+      <br/>
+      Our office on 3601 N Fruitridge Ave may have opened in 2019, but our team has more than twenty years of experience in home building. <br/>
       <br/>
       
-      We specialize in new construction so that you can enjoy your new home for (hopefully) many decades. <br />
+      We specialize in new construction so that you can enjoy your new home for (hopefully) many decades. <br/>
+
       We also buy local properties and bring them to their property glory thanks to our other Quality Companies: <bold>Quality Roofing of Indiana LLC</bold>, <bold>Quality Electric of Indiana LLC</bold>, and <a>Quality Excavating of Indiana LLC.</a> <br />
-      And with our trusted team of 100% local vendors, Southard Homes LLC has everything we need to get the job done.  <br />
+      And with our trusted team of 100% local vendors, Southard Homes LLC has everything we need to get the job done.  <br/>
         <br/>
-      Curious about Rent To Own (RTO)?<br />
-      We can't help you make sense of the housing market, but we can get you closer where you want to be: owning a home.<br />
-      We offer a 15-year contract for our RTO homes, and the house is yours upon completion. <br />
+        
+      Curious about Rent To Own (RTO)?
+      <br/>
+      We can't help you make sense of the housing market, but we can get you closer where you want to be: owning a home.<br/>
+      We offer a 15-year contract for our RTO homes, and the house is yours upon completion. <br/>
       Respond to a listing or call us any time to talk about inventory and options.
-    
     </div>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Meet The Team
+      <h2 class="font-bold text-3xl text-gray-800 text-center">
+        Strong Foundations
       </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        Coming Soon!
+      <p class="text-lg leading-relaxed text-slate-500 text-center">
+        We're not just building and selling homes; we're changing the landscape by investing (and re-investing) in our community, and building a new standard of quality in the Wabash Valley.
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
@@ -61,16 +61,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 sizes="(max-width: 800px) 100vw, 400px"
                 width={400}
                 height={400}
-                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square blur-md"
+                class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
               />
             </div>
 
-            {/* <div class="mt-4 text-center">
+            <div class="mt-4 text-center">
               <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
               </h3>
-            </div> */}
+            </div> 
           </div>
         ))
       }
