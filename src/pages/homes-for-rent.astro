@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Cta from "@components/cta.astro";
 import Sectionhead from "@components/sectionhead.astro";
+import RentalListings from "@components/Rental-Listings.astro";
 ---
 <Layout title="Homes for Sale| Terre Haute, IN | Southard Homes LLC">
     <Container>
@@ -22,8 +23,8 @@ import Sectionhead from "@components/sectionhead.astro";
     <p class=italic>Doorloop Note: A $30 application fee will be processed upon submission to cover the cost of a background check, TransUnion report, and credit card processing fee.</p>
     </div>
 
-    <div class="text-center italic text-2xl pt-8 font-prose text-[#9b9b9b]">No rental homes available. Check back soon!</div>
-
+    <!-- <div class="text-center italic text-2xl pt-8 font-prose text-[#9b9b9b]">No rental homes available. Check back soon!</div> -->
+<!-- <RentalListings /> -->
 <div class="text-center pt-8 font-prose text-lg flex justify-center">
 <a href="https://southardhomesllc.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=6747587dc1f13e76f53fc0f8&source=CompanyLink" target="_blank">
     Submit an Application on<img id="dl" src="/brandeddl.png" alt="Doorloop Rental Application" class="object-contain h-30 w-40 flex"/>

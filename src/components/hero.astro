@@ -5,6 +5,7 @@ import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon/components";
 import Listings from "@components/Listings.astro";
 import { CldVideoPlayer } from 'astro-cloudinary';
+import RTOListings from "./RTO-Listings.astro";
 ---
 <main>
 
@@ -42,7 +43,7 @@ import { CldVideoPlayer } from 'astro-cloudinary';
 <section class="w-full">
 
 <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex">
-  Available Homes</h2>
+  Available Homes For Sale</h2>
   <p class="w-full pt-8 text-lg">
   We are working on developing homes to suit a range of needs at every price point.
    Don't see what you need?<br/>
@@ -50,6 +51,18 @@ import { CldVideoPlayer } from 'astro-cloudinary';
    </p>
 <div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
   <Listings />
+</div>
+<h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex pt-8">
+  Available Rent-To-Own Homes</h2>
+  <p class="w-full pt-8 text-lg">
+    Southard Homes LLC offers a <strong>15-year contract</strong> for our RTO homes, and the house is yours upon completion. <br/>
+
+    We buy local properties and bring them to their proper glory thanks to our other Quality Companies: Quality Roofing of Indiana LLC, Quality Electric of Indiana LLC, and Quality Excavating of Indiana LLC.
+<br/>
+Our RTOs require you to secure <strong>Renter's Insurance</strong> - follow the link and <strong>fill out an application on doorloop</strong> and we will be in contact with you soon!
+    </br><a href="tel:812-243-2759" target="_blank" class="text-[#ffca28] font-bold">Call us</a> any time to talk about inventory and options.
+<div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
+  <RTOListings />
 </div>
 </section>
 </main>
