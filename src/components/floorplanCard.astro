@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+import Link from "./ui/link.astro";
+const { floorplanImg, fpAlt, floorplanName, basePrice, fpBeds, fpBath, fpGarage, fpSqFt, floorplanLink } = Astro.props;
+---
+
+<div id="cardBG" class="max-w-xs rounded-xl overflow-hidden shadow-lg duration-700 hover:scale-105">
+    <img class="w-full" src={floorplanImg} alt={fpAlt}>
+<div class="px-6 py-4 rounded">
+<div class="flex justify-between align-middle text-xl mb-2">
+    <div><b>{floorplanName}</b></div>
+    <div><b>{basePrice}</b></div>
+</div>
+<div id="floorplanFeatures" class="font-prose flex-1 flex items-center justify-between">
+    <div class="flex gap-1 align-top"><b>{fpSqFt}</b> SqFt</div>
+    <div class="flex gap-1 align-top"><b>{fpBeds}</b> Bed</div>
+    <div class="flex gap-1 align-top"><b>{fpBath}</b> Bath</div>
+    <div class="flex gap-1 align-top"><b>{fpGarage}</b></div>
+</div>
+</div>
+<div class="px-6 pt-4 hover:animate-pulse pb-2">
+    <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href={floorplanLink}
+        class="flex gap-1 items-center justify-center bg-[#ffca28] border-none drop-shadow-md"
+        target="_blank">
+        <Icon name="fluent:real-estate-20-filled" />
+         View Listing
+      </Link>
+</div>
+</div>
+</div>
+<style>
+#cardBG {
+    background-color: rgba(248, 250, 252, 0.93) !important;
+    color: black;
+}
+#floorplanFeatures {
+    color: #000000;
+    opacity: 0.8;
+}
+    </style>
