@@ -1,47 +1,92 @@
 ---
 import { Icon } from "astro-icon/components";
 import Link from "./ui/link.astro";
-const { listingImg, listingAlt, listingAddress, listingCityZip, listingPrice, lBeds, lBath, lGarage, lsqFt, listPerkFirst, listPerkSecond, listPerkThird, listingLink, priceUpdate } = Astro.props;
+
+const { 
+    listingImg, listingAlt, listingAddress, listingCityZip, 
+    listingPrice, lBeds, lBath, lGarage, lsqFt, 
+    listPerkFirst, listPerkSecond, listPerkThird, 
+    listingLink, priceUpdate, videoTourLink, floorplan2D, floorplan3D 
+} = Astro.props;
 ---
 
-<div id="cardBG" class="max-w-xs rounded-xl overflow-hidden shadow-lg duration-700 hover:scale-105">
-    <img class="w-full" src={listingImg} alt={listingAlt}>
-<div class="px-6 py-4 rounded">
-<div class="flex justify-between align-middle text-xl mb-2">
-    <div><b>{listingPrice}</b><span id="badge" class="whitespace-nowrap align-middle rounded-full px-4 py-3 align-top leading-none font-prose">{ priceUpdate }</span></div>
-</div>
-<div id="listingFeatures" class="font-prose flex-1 flex items-center justify-between">
-    <div class="flex gap-1 align-top"><b>{lBeds}</b> Bed</div>
-    <div class="flex gap-1 align-top"><b>{lBath}</b> Bath</div>
-    <div class="flex gap-1 align-top"><b>{lGarage}</b></div>
-    <div class="flex gap-1 align-top"><b>{lsqFt}</b> SqFt</div>
-</div>
-<div class="pt-4">
-<div class="flex-start font-prose">
-{listingAddress}
-<div class="flex-start font-prose">
-    {listingCityZip} 
-</div>
-</div>
-</div>
-<div class="pt-4 pb-2 hidden">
-<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkFirst}</span>
-<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkSecond}</span>
-<span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkThird}</span>
-</div>
-<div class="px-6 pt-4 hover:animate-pulse pb-2">
-    <Link
-        size="lg"
-        style="outline"
-        rel="noopener"
-        href={listingLink}
-        class="flex gap-1 items-center justify-center bg-[#ffca28] border-none drop-shadow-md"
-        target="_blank">
-        <Icon name="fluent:real-estate-20-filled" />
-         View Listing
-      </Link>
-</div>
-</div>
+<div id="cardBG" class="relative max-w-xs rounded-xl overflow-hidden shadow-lg duration-700 hover:scale-105">
+    <!-- Listing Image -->
+    <div class="relative">
+        <img class="w-full" src={listingImg} alt={listingAlt}>
+
+        <!-- Video Tour Icon (Only Shows If videoTourLink Exists) -->
+        {videoTourLink && (
+            <div class="absolute top-2 right-2 flex flex-col items-end space-y-2">
+                <!-- Video Tour Button -->
+                <a href={videoTourLink} target="_blank" rel="noopener" 
+                   class="bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition group">
+                    <Icon name="fluent:video-clip-20-filled" 
+                          class="w-10 h-10 drop-shadow-lg text-white group-hover:text-[#ffca28] transition-colors duration-300" />
+                </a>
+        
+                <!-- 2D Floorplan Button -->
+{floorplan2D && (
+    <a href={floorplan2D} title="2D Floorplan" target="_blank" rel="noopener" 
+    class="relative bg-white bg-opacity-70 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group">
+        <Icon name="mdi:set-square" color="#708090" class="w-9 h-9 text-white group-hover:text-[#ffca28] transition-colors duration-300 bg-bg-color/70 rounded" />
+        <span class="absolute text-lg font-bold text-white drop-shadow-md text-[#ffffff]">2D</span>
+    </a>
+)}
+
+<!-- 3D Floorplan Button -->
+{floorplan3D && (
+    <a href={floorplan3D} title="3D Floorplan" target="_blank" rel="noopener" 
+       class="relative bg-white bg-opacity-70 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group">
+        <Icon name="mdi:set-square" color="#708090" class="w-9 h-9 text-white group-hover:text-[#ffca28] transition-colors duration-300 bg-bg-color/70 rounded" />
+        <span class="absolute text-lg font-bold text-white drop-shadow-md text-[#ffffff]">3D</span>
+    </a>
+)}
+            </div>
+        )}
+
+    <div class="px-6 py-4 rounded">
+        <div class="flex justify-between align-middle text-xl mb-2">
+            <div><b>{listingPrice}</b>
+                <span id="badge" class="whitespace-nowrap align-middle rounded-full px-4 py-3 align-top leading-none font-prose">{ priceUpdate }</span>
+            </div>
+        </div>
+        
+        <div id="listingFeatures" class="font-prose flex-1 flex items-center justify-between">
+            <div class="flex gap-1 align-top"><b>{lBeds}</b> Bed</div>
+            <div class="flex gap-1 align-top"><b>{lBath}</b> Bath</div>
+            <div class="flex gap-1 align-top"><b>{lGarage}</b></div>
+            <div class="flex gap-1 align-top"><b>{lsqFt}</b> SqFt</div>
+        </div>
+
+        <div class="pt-4">
+            <div class="flex-start font-prose">
+                {listingAddress}
+                <div class="flex-start font-prose">
+                    {listingCityZip} 
+                </div>
+            </div>
+        </div>
+
+        <div class="pt-4 pb-2 hidden">
+            <span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkFirst}</span>
+            <span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkSecond}</span>
+            <span class="inline-block rounded-full px-3 py-1 text-sm font-serif text-gray-700 mr-2 mb-2">{listPerkThird}</span>
+        </div>
+
+        <div class="px-6 pt-4 hover:animate-pulse pb-2">
+            <Link
+                size="lg"
+                style="outline"
+                rel="noopener"
+                href={listingLink}
+                class="flex gap-1 items-center justify-center bg-[#ffca28] border-none drop-shadow-md"
+                target="_blank">
+                <Icon name="fluent:real-estate-20-filled" />
+                View Listing
+            </Link>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -56,4 +101,4 @@ const { listingImg, listingAlt, listingAddress, listingCityZip, listingPrice, lB
     color: #000000;
     opacity: 0.8;
 }
-    </style>
+</style>
