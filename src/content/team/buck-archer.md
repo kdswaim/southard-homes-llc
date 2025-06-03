@@ -3,7 +3,7 @@ draft: false
 name: "Buck Archer"
 title: "Staff Psychologist"
 avatar: {
-    src: "https://1drv.ms/i/s!AoM7TSrp7nnmlVa8U4plm2qdLrb5?embed=1&width=256",
+    src: "https://i.postimg.cc/Y09GP0Fh/Buckingtonly.jpg",
     alt: "Buck Archer"
 }
 publishDate: "2022-11-08 15:39"
