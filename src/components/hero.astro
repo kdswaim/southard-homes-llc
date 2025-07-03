@@ -42,42 +42,55 @@ import RentalListings from "./Rental-Listings.astro";
 </header>
 
 <section class="w-full">
-
-<h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex">
+  <article>
+<h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg:tracking-tight xl:tracking-tighter mt-4 justify-center flex">
   Available Homes For Sale</h2>
-  <p class="w-full pt-8 text-lg">
+  <p class="pt-8">
   We are working on developing homes to suit a range of needs at every price point.
-   Don't see what you need?<br/>
-   Check back for new single-family homes in <b>Southard Acres West</b> (Terre Town) starting at $222.9K, homes in <b>Terre Vista</b> starting around $400,000, and updated city lots starting at around $130K.
+  </p>
+   <p class="py-1">
+    Don't see what you need?
+  </p>
+   <p class="py-1">
+    Check back for new single-family homes in <b>Southard Acres West</b> (Terre Town) starting at $222.9K, homes in <b>Terre Vista</b> starting around $400,000, and updated city lots starting at around $130K.
    </p>
 <div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
   <Listings />
 </div>
+</article>
 
-<!-- <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex pt-8">
+<article>
+<h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex pt-8">
   Available Rent-To-Own Homes</h2>
-  <p class="w-full pt-8 text-lg">
-    Southard Homes LLC offers a <strong>15-year contract</strong> for our RTO homes, and the house is yours upon completion. <br/>
-
+  <p class="py-1">
+    Southard Homes LLC offers a <strong>15-year contract</strong> for our RTO homes, and the house is yours upon completion. 
+</p>
+<p class="py-1">
     We buy local properties and bring them to their proper glory thanks to our other Quality Companies: Quality Roofing of Indiana LLC, Quality Electric of Indiana LLC, and Quality Excavating of Indiana LLC.
-<br/>
-Our RTOs require you to secure <strong>Renter's Insurance</strong> - follow the link and <strong>fill out an application on doorloop</strong> and we will be in contact with you soon!
-    </br><a href="tel:812-243-2759" target="_blank" class="text-[#ffca28] font-bold">Call us</a> any time to talk about inventory and options.
-<div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
-  <RTOListings /> -->
+</p>
+<p class="py-1">
+Our RTOs require you to secure <strong>Renter's Insurance</strong>, and a down payment <strong>equal to the monthly rent amount</strong>  - follow the link and <strong>fill out an application on doorloop</strong> and we will be in contact with you soon!
+</p>    
 
+<a href="tel:812-243-2759" target="_blank" class="text-[#ffca28] font-bold">Call us</a> any time to talk about inventory and options.
+<div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
+  <RTOListings />
 </div>
-<!-- <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex pt-8">
+</article>
+
+<!-- <article>
+ <h2 class="pb-8 text-3xl lg:text-4xl xl:text-5xl font-bold lg: tracking-tight xl:tracking-tighter mt-4 justify-center flex pt-8">
   Available Rental Homes</h2>
-  <p class="w-full pt-8 text-lg">
+  <p class="py-1">
     Just like our RTO options, we improve on existing housing inventory with our in-house contractors to give local homeseekers more flexible options. <br/>
         See one you like? Submit an application through our tenant portal on <a href="https://southardhomesllc.app.doorloop.com/tenant-portal/rental-applications/listing?companyId=6747587dc1f13e76f53fc0f8&source=CompanyLink" target="_blank" class="text-[#ffca28] font-bold">Doorloop</a>*.</br>
     </p>
-    <p class=italic>Deposit: $1,625 (refundable), no pets allowed. </p>
-    <p class=italic><span class="underline">Doorloop Note:</span> A $30 application fee will be processed upon submission to cover the cost of a background check, TransUnion report, and credit card processing fee.</p>
+    <p class="italic py-1">Deposit: $1,625 (refundable), no pets allowed. </p>
+    <p class="italic py-1"><span class="underline">Doorloop Note:</span> A $30 application fee will be processed upon submission to cover the cost of a background check, TransUnion report, and credit card processing fee.</p>
 <div class="w-full relative mt-6 flex flex-col md:flex-row gap-3 items-center md:justify-start">
    <RentalListings />
 </div> -->
+</article>
 </section>
 </main>
 
@@ -88,4 +101,10 @@ Our RTOs require you to secure <strong>Renter's Insurance</strong> - follow the 
     width: screen;
     height: screen;
   }
+
+  article {
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 20px;
+}
 </style>
