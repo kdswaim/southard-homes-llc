@@ -15,35 +15,34 @@ const {
     <div class="relative">
         <img class="w-full" src={listingImg} alt={listingAlt}>
 
-        <!-- Video Tour Icon (Only Shows If videoTourLink Exists) -->
-        {videoTourLink && (
-            <div class="absolute top-2 right-2 flex flex-col items-end space-y-2">
-                <!-- Video Tour Button -->
-                <a href={videoTourLink} target="_blank" rel="noopener" 
-                   class="bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition group">
-                    <Icon name="fluent:video-clip-20-filled" 
-                          class="w-10 h-10 drop-shadow-lg text-white group-hover:text-[#ffca28] transition-colors duration-300" />
-                </a>
-        
-                <!-- 2D Floorplan Button -->
-{floorplan2D && (
-    <a href={floorplan2D} title="2D Floorplan" target="_blank" rel="noopener" 
-    class="relative bg-white bg-opacity-70 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group">
-        <Icon name="mdi:set-square" color="#708090" class="w-9 h-9 text-white group-hover:text-[#ffca28] transition-colors duration-300 bg-bg-color/70 rounded" />
-        <span class="absolute text-lg font-bold text-white drop-shadow-md text-[#ffffff]">2D</span>
+ <div class="absolute top-2 right-2 flex flex-col items-end space-y-2">
+  {videoTourLink && (
+    <a href={videoTourLink} target="_blank" rel="noopener" 
+      class="bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 transition group"
+      aria-label="Watch video tour">
+      <Icon name="fluent:video-clip-20-filled" 
+        class="w-10 h-10 drop-shadow-lg text-white group-hover:text-[#ffca28] transition-colors duration-300" />
     </a>
-)}
+  )}
 
-<!-- 3D Floorplan Button -->
-{floorplan3D && (
-    <a href={floorplan3D} title="3D Floorplan" target="_blank" rel="noopener" 
-       class="relative bg-white bg-opacity-70 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group">
-        <Icon name="mdi:set-square" color="#708090" class="w-9 h-9 text-white group-hover:text-[#ffca28] transition-colors duration-300 bg-bg-color/70 rounded" />
-        <span class="absolute text-lg font-bold text-white drop-shadow-md text-[#ffffff]">3D</span>
+  {floorplan2D && (
+    <a href={floorplan2D} title="2D Floorplan" target="_blank" rel="noopener"
+      class="relative bg-white bg-opacity-80 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group"
+      aria-label="View 2D floorplan">
+      <Icon name="mdi:set-square" class="w-9 h-9 text-[#708090] group-hover:text-[#ffca28] transition-colors duration-300 rounded" />
+      <span class="absolute text-sm font-bold text-white drop-shadow-md">2D</span>
     </a>
-)}
-            </div>
-        )}
+  )}
+
+  {floorplan3D && (
+    <a href={floorplan3D} title="3D Floorplan" target="_blank" rel="noopener"
+      class="relative bg-white bg-opacity-70 text-black p-2 rounded-full hover:bg-opacity-90 transition flex items-center justify-center group"
+      aria-label="View 3D floorplan">
+      <Icon name="mdi:set-square" class="w-9 h-9 text-[#708090] group-hover:text-[#ffca28] transition-colors duration-300 rounded" />
+      <span class="absolute text-sm font-bold text-white drop-shadow-md">3D</span>
+    </a>
+  )}
+</div>
 
     <div class="px-6 py-4 rounded">
         <div class="flex justify-between align-middle text-xl mb-2">
