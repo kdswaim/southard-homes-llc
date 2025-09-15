@@ -9,7 +9,7 @@ const { frontmatter } = Astro.props;
 <Layout title={frontmatter.title}>
   <Container>
     <div class="mx-auto max-w-[735px] mt-14">
-      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+      <span class="text-white uppercase tracking-wider text-sm font-medium">
         {frontmatter.category}
       </span>
       <h1
@@ -35,7 +35,7 @@ const { frontmatter } = Astro.props;
       </div>
     </div>
 
-    <div class="mx-auto prose prose-lg mt-6">
+    <div class="mx-auto prose prose-lg mt-6 color-white">
       <slot />
     </div>
     <div class="text-center mt-8">
@@ -47,3 +47,31 @@ const { frontmatter } = Astro.props;
     </div>
   </Container>
 </Layout>
+
+<style>
+  /* For image galleries */
+  .responsive-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .responsive-gallery img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  /* On mobile: stack images vertically */
+  @media (max-width: 768px) {
+    .responsive-gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  p {
+    color: white;
+  }
+</style>
