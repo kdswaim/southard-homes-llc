@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Ann Sandlin"
-title: "Office Manager"
+title: "Office Manager Emeritus"
 avatar: {
     src: "https://i.postimg.cc/G2bskqhP/Ann.jpg",
     alt: "Ann Sandlin"
