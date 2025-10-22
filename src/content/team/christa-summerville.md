@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Christa Summerville"
-title: "Marketing & Sales Manager"
+title: "Real Estate Agent"
 avatar: {
     src: "https://i.postimg.cc/SK6M2wqN/Christa.jpg",
     alt: "Christa Summerville"
