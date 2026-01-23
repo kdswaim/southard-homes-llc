@@ -29,7 +29,7 @@ Styling: Tailwind CSS
 
 Hosting: Netlify
 
-Analytics: Google Analytics
+Analytics: Goatcounter
 
 The site is fully static, optimized for speed, and built with a mobile-first approach to reach homebuyers wherever they are.
 
